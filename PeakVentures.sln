@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.PixelService", "PeakVentures.PixelService\PeakVentures.PixelService.csproj", "{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeakVentures.PixelService", "PeakVentures.PixelService\PeakVentures.PixelService.csproj", "{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.StorageService", "PeakVentures.StorageService\PeakVentures.StorageService.csproj", "{A7AF716A-A681-445F-BF96-1F30F510A05E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeakVentures.StorageService", "PeakVentures.StorageService\PeakVentures.StorageService.csproj", "{A7AF716A-A681-445F-BF96-1F30F510A05E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A6CC50E2-499A-4E25-BDF6-EDC42834418B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.PixelService.Tests", "PeakVentures.PixelService.Tests\PeakVentures.PixelService.Tests.csproj", "{E27B7DD9-5BA1-4577-B522-47CF9EACC0A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeakVentures.PixelService.Tests", "PeakVentures.PixelService.Tests\PeakVentures.PixelService.Tests.csproj", "{E27B7DD9-5BA1-4577-B522-47CF9EACC0A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.StorageService.Tests", "PeakVentures.StorageService.Tests\PeakVentures.StorageService.Tests.csproj", "{29A583E8-9458-4FD9-97C9-6BB6E2C0E359}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeakVentures.StorageService.Tests", "PeakVentures.StorageService.Tests\PeakVentures.StorageService.Tests.csproj", "{29A583E8-9458-4FD9-97C9-6BB6E2C0E359}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5DDB689C-3B4C-4906-9AD7-B7D1770F8E89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0} = {5DDB689C-3B4C-4906-9AD7-B7D1770F8E89}
+		{A7AF716A-A681-445F-BF96-1F30F510A05E} = {5DDB689C-3B4C-4906-9AD7-B7D1770F8E89}
 		{E27B7DD9-5BA1-4577-B522-47CF9EACC0A4} = {A6CC50E2-499A-4E25-BDF6-EDC42834418B}
 		{29A583E8-9458-4FD9-97C9-6BB6E2C0E359} = {A6CC50E2-499A-4E25-BDF6-EDC42834418B}
 	EndGlobalSection

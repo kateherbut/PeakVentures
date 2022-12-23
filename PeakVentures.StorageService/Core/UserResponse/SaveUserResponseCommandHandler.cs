@@ -17,17 +17,15 @@ namespace PeakVentures.StorageService.Core.UserResponse
             this.builder = builder;
         }
 
-        public Task Handle(SaveUserResponseCommand notification, CancellationToken cancellationToken)
+        public async Task Handle(SaveUserResponseCommand notification, CancellationToken cancellationToken)
         {
             var record = builder.Build(notification.Referer, notification.UserAgent, notification.IpAddress, notification.CreatedAt);
-            using (var fs = File.Open(config.FilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+            using (var fs = File.Open(config.FilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
             {
-                byte[] bytes = Encoding.ASCII.GetBytes(record);
-                fs.Write(bytes, 0, bytes.Length);
+                byte[] bytes = Encoding.ASCII.GetBytes(record + Environment.NewLine);
+                await fs.WriteAsync(bytes, 0, bytes.Length);
                 fs.Close();
             }
-
-            return Task.CompletedTask;
         }
     }
 }

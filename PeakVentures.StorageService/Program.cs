@@ -1,11 +1,10 @@
 using MediatR;
+using Microsoft.Extensions.Options;
 using PeakVentures.StorageService.Configurations;
 using PeakVentures.StorageService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<ServiceBusConfiguration>(builder.Configuration.GetSection("ServiceBus"));
@@ -25,6 +24,11 @@ if (app.Environment.IsDevelopment())
 }
 
 await app.Services.RegisterQueueProcessors();
+
+var storageConfig = app.Services.GetRequiredService<IOptions<StorageConfiguration>>().Value;
+var directory = Path.GetDirectoryName(storageConfig.FilePath);
+if (directory != null)
+    Directory.CreateDirectory(directory);
 
 app.UseHttpsRedirection();
 

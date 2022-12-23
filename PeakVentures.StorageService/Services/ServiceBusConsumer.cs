@@ -19,7 +19,7 @@ namespace PeakVentures.StorageService.Services
         private readonly IMapper mapper;
         private readonly ILogger<ServiceBusConsumer> logger;
         private readonly IServiceScopeFactory scopeFactory;
-        private List<ServiceBusProcessor> processors = new List<ServiceBusProcessor>();
+        private List<ServiceBusProcessor> processors = new();
 
         public ServiceBusConsumer(IOptions<ServiceBusConfiguration> config, ILogger<ServiceBusConsumer> logger, IMapper mapper, IServiceScopeFactory scopeFactory)
         {

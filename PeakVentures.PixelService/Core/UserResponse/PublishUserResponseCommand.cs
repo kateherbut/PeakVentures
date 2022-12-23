@@ -2,7 +2,7 @@
 
 namespace PeakVentures.PixelService.Core.UserResponse
 {
-    internal record PublishUserResponseCommand : INotification
+    public record PublishUserResponseCommand : INotification
     {
         public string? Referer { get; set; }
         public string? UserAgent { get; set; }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.PixelService", "PeakVentures.PixelService\PeakVentures.PixelService.csproj", "{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakVentures.StorageService", "PeakVentures.StorageService\PeakVentures.StorageService.csproj", "{A7AF716A-A681-445F-BF96-1F30F510A05E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F42E73E-DA29-49BB-B6AC-314FBCCCA3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AF716A-A681-445F-BF96-1F30F510A05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AF716A-A681-445F-BF96-1F30F510A05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AF716A-A681-445F-BF96-1F30F510A05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AF716A-A681-445F-BF96-1F30F510A05E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA8FCE06-8F79-4B4E-BCA2-F23898485EA6}
+	EndGlobalSection
+EndGlobal

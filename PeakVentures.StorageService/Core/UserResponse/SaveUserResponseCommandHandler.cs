@@ -20,12 +20,12 @@ namespace PeakVentures.StorageService.Core.UserResponse
         public async Task Handle(SaveUserResponseCommand notification, CancellationToken cancellationToken)
         {
             var record = builder.Build(notification.Referer, notification.UserAgent, notification.IpAddress, notification.CreatedAt);
-            using (var fs = File.Open(config.FilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
-            {
-                byte[] bytes = Encoding.ASCII.GetBytes(record + Environment.NewLine);
-                await fs.WriteAsync(bytes, 0, bytes.Length);
-                fs.Close();
-            }
+            
+            // Introduce an abstraction for better testability 
+            using var fs = File.Open(config.FilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
+            byte[] bytes = Encoding.ASCII.GetBytes(record + Environment.NewLine);
+            await fs.WriteAsync(bytes, cancellationToken);
+            fs.Close();
         }
     }
 }

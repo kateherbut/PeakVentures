@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PeakVentures.PixelService\PeakVentures.PixelService.csproj" />
+    <ProjectReference Include="..\..\src\PeakVentures.StorageService\PeakVentures.StorageService.csproj" />
   </ItemGroup>
 
 </Project>
